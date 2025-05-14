@@ -34,7 +34,45 @@ A Blank Document opens up into which the following source code can be typed down
 
 ## Source Code – Using Case Statement :
 
-(Include program here)
+module 
+
+alu_32bit_case(y,a,b,f); input 
+
+[31:0]a;
+
+input [31:0]b;
+
+input [2:0]f; 
+
+output reg [31:0]y; 
+
+always@(*)
+
+begin 
+
+case(f)
+
+3'b000:y=a&b; //AND Operation 
+
+3'b001:y=a|b; //OR Operation 
+
+3'b010:y=~(a&b); //NAND
+
+Operation 3'b011:y=~(a|b); //NOR
+
+Operation 3'b010:y=a+b;
+
+//Addition 3'b011:y=a-b;
+
+//Subtraction 3'b100:y=a*b;
+
+//Multiply default:y=32'bx;
+
+endcase 
+
+end 
+
+endmodule
 
 Use Save option or Ctrl+S to save the code or click on the save option from the top most right corner and close the text file.
 
@@ -44,7 +82,43 @@ Similarly, create your test bench using gedit <filename_tb>.v or <filename_tb>.v
 
 ## Test Bench :
 
-(Include test bench program here)
+module alu_32bit_tb_case; 
+
+reg [31:0]a;
+
+reg [31:0]b;
+
+reg [2:0]f;
+
+wire [31:0]y;
+
+alu_32bit_case test2(.y(y),.a(a),.b(b),.f(f)); 
+
+initial
+
+begin 
+
+a=32'h00000000; 
+
+b=32'hFFFFFFF
+
+F; #10
+
+f=3'b000;
+
+#10 f=3'b001;
+
+#10 f=3'b010;
+
+#10 f=3'b100;
+
+end 
+
+initial
+
+#50 $finish; 
+
+endmodule
 
 Use Save option or Ctrl+S to save the code or click on the save option from the top most right corner and close the text file.
 
@@ -60,6 +134,9 @@ source /cadence/install/cshrc (mention the path of the tools)
       
 After this you can see the window like below 
 
+![Screenshot (84)](https://github.com/user-attachments/assets/6573d194-188a-43cc-90d2-45fbb3793ff4)
+
+
 ### Fig 2: Invoke the Cadence Environment
 
 To Launch Simulation tool 
@@ -73,11 +150,17 @@ or
 
 It will invoke the nclaunch window for functional simulation we can compile,elaborate and simulate it using Multiple Step .
 
+![Screenshot (86)](https://github.com/user-attachments/assets/998f7799-4b77-4e00-ac85-30acc9d910cb)
+
+
 ### Fig 3: Setting Multi-step simulation
 
 Select Multiple Step and then select “Create cds.lib File” as shown in below figure 
 
 Click the cds.lib file and save the file by clicking on Save option 
+
+![Screenshot (87)](https://github.com/user-attachments/assets/79e99dec-b8c2-45d3-97d4-42144158dca4)
+
 
 ### Fig 4:cds.lib file Creation
 
@@ -100,6 +183,9 @@ Left side you can see the HDL files. Right side of the window has worklib and sn
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation .
 
 To perform the function simulation, the following three steps are involved Compilation, Elaboration and Simulation. 
+
+![Screenshot (89)](https://github.com/user-attachments/assets/7f796076-a97b-46ed-941f-f021bc4858b7)
+
 
 ### Fig 6: Nclaunch Window
 
@@ -124,6 +210,9 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 Left side select the file and in Tools : launch verilog compiler with current selection will get enable. Click it to compile the code 
 
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation 
+
+![Screenshot (91)](https://github.com/user-attachments/assets/5848e758-ca65-4170-99f8-9a723793a11e)
+
 
 ### Fig 7: Compiled database in worklib
 
@@ -159,6 +248,9 @@ Outputs: Elaborate database updated in mapped library if successful, generates r
 
 After elaboration the file will come under snapshot. Select the test bench and simulate it.
 
+![Screenshot (93)](https://github.com/user-attachments/assets/93278e82-2eed-46d9-9d9f-ba896de066c0)
+
+
 ## Fig 8: Elaboration Launch Option
 
 ## Step 3: Simulation: 
@@ -173,11 +265,18 @@ Simulation allow to dump design and test bench signals into a waveform
 
 Steps for simulation – Run the simulation command with simulator options
 
+![Screenshot (94)](https://github.com/user-attachments/assets/28e51acd-f8d4-498b-aab0-01c9340b8784)
+
+
 ## Fig 9: Design Browser window for simulation
+
+![Screenshot (96)](https://github.com/user-attachments/assets/3efda2e6-aeaf-411f-8c42-e601632f190f)
+
 
 ## Fig 10:Simulation Waveform Window
 
-## Fig 11:Simulation Waveform Window
+![Screenshot (97)](https://github.com/user-attachments/assets/a0d6e839-5bb9-48e2-b65a-cff28acc41f1)
+
 
 ### Result
 
