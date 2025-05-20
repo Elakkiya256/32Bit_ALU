@@ -150,7 +150,8 @@ or
 
 It will invoke the nclaunch window for functional simulation we can compile,elaborate and simulate it using Multiple Step .
 
-![Screenshot (86)](https://github.com/user-attachments/assets/998f7799-4b77-4e00-ac85-30acc9d910cb)
+![Screenshot (124)](https://github.com/user-attachments/assets/cf24b1f2-19ff-45dd-a2d0-7e1c4a3fdf51)
+
 
 
 ### Fig 3: Setting Multi-step simulation
@@ -159,7 +160,7 @@ Select Multiple Step and then select “Create cds.lib File” as shown in below
 
 Click the cds.lib file and save the file by clicking on Save option 
 
-![Screenshot (87)](https://github.com/user-attachments/assets/79e99dec-b8c2-45d3-97d4-42144158dca4)
+![Screenshot (125)](https://github.com/user-attachments/assets/2103b2b0-fbe5-4b36-a119-36e68d155e0c)
 
 
 ### Fig 4:cds.lib file Creation
@@ -184,10 +185,11 @@ Worklib is the directory where all the compiled codes are stored while Snapshot 
 
 To perform the function simulation, the following three steps are involved Compilation, Elaboration and Simulation. 
 
-![Screenshot (89)](https://github.com/user-attachments/assets/7f796076-a97b-46ed-941f-f021bc4858b7)
-
 
 ### Fig 6: Nclaunch Window
+
+![Screenshot (119)](https://github.com/user-attachments/assets/9645a5f4-1170-4ebd-bf86-3a1f67403827)
+
 
 ## Step 1: Compilation:
 
@@ -211,7 +213,7 @@ Left side select the file and in Tools : launch verilog compiler with current se
 
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation 
 
-![Screenshot (91)](https://github.com/user-attachments/assets/5848e758-ca65-4170-99f8-9a723793a11e)
+![Screenshot (122)](https://github.com/user-attachments/assets/9feb942b-5cdc-432e-af19-209477d82824)
 
 
 ### Fig 7: Compiled database in worklib
@@ -248,7 +250,8 @@ Outputs: Elaborate database updated in mapped library if successful, generates r
 
 After elaboration the file will come under snapshot. Select the test bench and simulate it.
 
-![Screenshot (93)](https://github.com/user-attachments/assets/93278e82-2eed-46d9-9d9f-ba896de066c0)
+![Screenshot (123)](https://github.com/user-attachments/assets/08a9756b-2b09-4aa1-a261-3666b2ad315b)
+
 
 
 ## Fig 8: Elaboration Launch Option
